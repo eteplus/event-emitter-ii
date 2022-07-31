@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "ignorePatterns": ["lib/**/*.*"],
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/semi": ["error", "always"],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2]
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.ts", "test/**/*.ts"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    },
+    {
+      "files": ["vite.config.ts"],
+      "parserOptions": {
+        "project": ["./tsconfig.node.json"]
+      }
+    }
+  ]
+}

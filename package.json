@@ -1,0 +1,76 @@
+{
+  "name": "event-emitter-ii",
+  "version": "0.0.1",
+  "author": "eteplus <https://github.com/eteplus>",
+  "description": "EventEmitterII is the universal and tiny Event Emitter available for Node.js and Browsers",
+  "packageManager": "pnpm@7.7.0",
+  "type": "module",
+  "engines": {
+    "node": "> 14"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "rollup"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.mjs",
+      "default": "./lib/index.mjs"
+    }
+  },
+  "main": "lib/index.mjs",
+  "module": "lib/index.mjs",
+  "legacy": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/*",
+        "./lib/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "EventEmitter",
+    "EventTarget"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eteplus/event-emitter-ii.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/node": "^18.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4",
+    "vitest": "^0.19.1"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "license": "MIT"
+}
